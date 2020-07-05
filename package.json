@@ -1,0 +1,26 @@
+{
+  "name": "suning",
+  "version": "1.0.0",
+  "description": "这是一个伟大的项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fxg-xz/suning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fxg-xz/suning/issues"
+  },
+  "homepage": "https://github.com/fxg-xz/suning#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}

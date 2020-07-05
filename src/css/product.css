@@ -1,0 +1,926 @@
+@charset "utf8";
+.main .details{
+    margin: 0 auto;
+    width: 983px;
+}
+.main .pdInfo {
+    margin-top: 30px;
+    width: 983px;
+  }
+  .main .pdInfo .pdInfoSlide {
+    width: 400px;
+    margin-right: 30px;
+  }
+  .main .pdInfo .pdInfoSlide .pdtImg {
+    position: relative;
+    width: 398px;
+    height: 398px;
+    border: 1px solid #e9e9e9;
+    z-index: 3;
+  }
+  .main .pdInfo .pdInfoSlide .pdtImg img {
+    width: 398px;
+    height: 398px;
+  }
+  .main .pdInfo .pdInfoSlide .pdtImg i {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: 8px;
+    bottom: 10px;
+    background-position: -47px 0;
+    z-index: 100;
+  }
+  .main .pdInfo .pdInfoSlide .seckill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 399px;
+    height: 50px;
+    background: #ff334c;
+    display: none;
+    z-index: 100;
+  }
+  .main .pdInfo .pdInfoSlide .seckill .seckill_clock {
+    background: url(http://design.ehaoyao.com/new_site/static/images/icon_clock.png) no-repeat center;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    position: absolute;
+    top: 13px;
+    left: 8px;
+  }
+  .main .pdInfo .pdInfoSlide .seckill .seckill_xsqg {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 50px;
+    padding-left: 42px;
+  }
+  .main .pdInfo .pdInfoSlide .seckill .seckill-warp {
+    padding-left: 6px;
+  }
+  .main .pdInfo .pdInfoSlide .seckill .seckill-warp i {
+    position: static;
+  }
+  .main .pdInfo .pdInfoSlide .seckill .seckill-warp #seckill_d {
+    width: auto;
+    height: 25px;
+    background: #ffffff;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 27px;
+    color: #ff334c;
+    font-size: 18px;
+    text-align: center;
+  }
+  .main .pdInfo .pdInfoSlide .seckill .seckill-warp #seckill_h {
+    width: 32px;
+    height: 25px;
+    background: #ffffff;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 27px;
+    color: #ff334c;
+    font-size: 18px;
+    text-align: center;
+  }
+  .main .pdInfo .pdInfoSlide .seckill .seckill-warp #seckill_m {
+    width: 32px;
+    height: 25px;
+    background: #ffffff;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 27px;
+    color: #ff334c;
+    font-size: 18px;
+    text-align: center;
+  }
+  .main .pdInfo .pdInfoSlide .seckill .seckill-warp #seckill_s {
+    width: 32px;
+    height: 25px;
+    background: #ffffff;
+    border-radius: 5px;
+    display: inline-block;
+    line-height: 27px;
+    color: #ff334c;
+    font-size: 18px;
+    text-align: center;
+  }
+  .main .pdInfo .pdInfoSlide .seckill .seckill-warp .time-i {
+    font-size: 16px;
+    color: #ffffff;
+    padding: 2px;
+  }
+  .main .pdInfo .pdInfoSlide .seckill .contText {
+    color: #ffffff;
+    font-size: 16px;
+    padding-left: 2px;
+    line-height: 40px;
+  }
+  .main .pdInfo .pdInfoSlide .slideImg {
+    width: 400px;
+    height: 400px;
+    border: 1px solid #e9e9e9;
+    box-sizing: border-box;
+    margin-bottom: 6px;
+  }
+  .main .pdInfo .pdInfoSlide .leftIcon,
+  .main .pdInfo .pdInfoSlide .rightIcon {
+    width: 15px;
+    height: 75px;
+    cursor: pointer;
+  }
+  .main .pdInfo .pdInfoSlide .leftIcon {
+    background: url(http://design.ehaoyao.com/new_site/static/images/sleft.png) no-repeat center center;
+  }
+  .main .pdInfo .pdInfoSlide .rightIcon {
+    background: url(http://design.ehaoyao.com/new_site/static/images/sright.png) no-repeat center center;
+  }
+  .main .pdInfo .pdInfoSlide .tbcont {
+    position: relative;
+    width: 370px;
+    overflow: hidden;
+    height: 75px;
+  }
+  .main .pdInfo .pdInfoSlide ul li {
+    float: left;
+    display: block;
+    margin-left: 4px;
+    width: 70px;
+    height: 75px;
+  }
+  .main .pdInfo .pdInfoSlide ul li a {
+    display: block;
+    width: 70px;
+    height: 75px;
+    text-align: center;
+  }
+  .main .pdInfo .pdInfoSlide ul li a img {
+    vertical-align: middle;
+    width: 64px;
+    height: 64px;
+    margin-top: 5px;
+    border: 2px solid #fff;
+  }
+  .main .pdInfo .pdInfoSlide ul li a.zoomThumbActive {
+    background: url(http://design.ehaoyao.com/new_site/static/images/topicon.png) no-repeat;
+    background-position: center top;
+  }
+  .main .pdInfo .pdInfoSlide ul li a.zoomThumbActive img {
+    border: 2px solid #ff354f;
+  }
+  .main .pdInfo .pdInfoSlide .shareFollow {
+    margin: 10px 0 20px;
+  }
+  .main .pdInfo .pdInfoSlide .shareFollow .share {
+    background: url(http://design.ehaoyao.com/new_site/static/images/share.png) no-repeat left center;
+    padding-left: 20px;
+    cursor: pointer;
+    margin: 0 40px 0 0;
+  }
+  .main .pdInfo .pdInfoSlide .shareFollow .follow {
+    background: url(http://design.ehaoyao.com/new_site/static/images/gz.png) no-repeat left center;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+  .main .pdInfo .pdInfoSlide .shareFollow .hnumber {
+    padding-left: 30px;
+  }
+  .main .pdInfo .pdInfoSlide .wxtip {
+    margin-bottom: 50px;
+  }
+  .main .pdInfo .marketable {
+    background: url(http://design.ehaoyao.com/new_site/static/images/nomark.png) no-repeat left center;
+    padding-left: 40px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    font-size: 16px;
+    color: #181818;
+  }
+  .main .pdInfo .infoDetails {
+    color: #666666;
+    width: 550px;
+  }
+  .main .pdInfo .infoDetails .procolor {
+    color: #343434;
+  }
+  .main .pdInfo .infoDetails h1 {
+    font-size: 18px;
+    color: #181818;
+    font-weight: normal;
+    padding-left: 10px;
+    margin-top: -5px;
+    margin-bottom: 3px;
+  }
+  .main .pdInfo .infoDetails .micText {
+    padding-left: 10px;
+    font-size: 14px;
+    color: #ff334c;
+    font-weight: normal;
+    margin-bottom: 3px;
+  }
+  .main .pdInfo .infoDetails .micText .expandOrFold {
+    padding-left: 5px;
+    padding-right: 20px;
+    color: #888888;
+  }
+  .main .pdInfo .infoDetails .micText .expandOrFold:hover {
+    text-decoration: underline;
+  }
+  .main .pdInfo .infoDetails .micText .expandOrFold.arr_up {
+    background: url(http://design.ehaoyao.com/new_site/static/images/icon_arrow_up.png) no-repeat right center;
+  }
+  .main .pdInfo .infoDetails .micText .expandOrFold.arr_show {
+    background: url(http://design.ehaoyao.com/new_site/static/images/icon_arrow_down.png) no-repeat right center;
+  }
+  .main .pdInfo .infoDetails .pritop {
+    padding-left: 10px;
+    margin-top: -5px;
+    margin-bottom: 5px;
+  }
+  .main .pdInfo .infoDetails .certificate {
+    padding-top: 25px;
+  }
+  .main .pdInfo .infoDetails .cert-promise,
+  .main .pdInfo .infoDetails .cert-baidu {
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: #181818;
+  }
+  .main .pdInfo .infoDetails .cert-promise {
+    background: url(http://design.ehaoyao.com/new_site/static/images/icon_details_promise.png) no-repeat left center;
+  }
+  .main .pdInfo .infoDetails .cert-baidu {
+    background: url(http://design.ehaoyao.com/new_site/static/images/icon_details_baidu.png) no-repeat left center;
+  }
+  .main .pdInfo .infoDetails .tiptop.dewinfo {
+    height: 26px;
+    line-height: 26px;
+    border: none;
+    margin: 6px 0 0 0;
+    padding: 0;
+    padding-left: 10px;
+  }
+  .main .pdInfo .infoDetails .tiptop.noline {
+    padding-left: 10px;
+    border: none;
+    margin-bottom: 5px;
+    line-height: 30px;
+  }
+  .main .pdInfo .infoDetails .priceboxLeft {
+    float: left;
+    padding-top: 26px;
+    padding-right: 10px;
+  }
+  .main .pdInfo .infoDetails .priceboxLeft em {
+    width: 36px;
+    display: inline-block;
+  }
+  .main .pdInfo .infoDetails .boxLeft {
+    width: 60px;
+    display: inline-block;
+    margin: 0 20px 0 10px;
+    float: left;
+  }
+  .main .pdInfo .infoDetails .boxLeft em {
+    width: 38px;
+    display: inline-block;
+  }
+  .main .pdInfo .infoDetails .noPrice {
+    font-size: 20px;
+    color: #181818;
+    margin-top: 16px;
+  }
+  .main .pdInfo .infoDetails .oldPrice {
+    font-size: 18px;
+    color: #999999;
+    margin-top: 21px;
+    text-decoration: line-through;
+    margin-left: 10px;
+  }
+  .main .pdInfo .infoDetails .price {
+    font-size: 36px;
+    color: #de0021;
+    margin-right: 13px;
+  }
+  .main .pdInfo .infoDetails .price i {
+    font-size: 18px;
+    position: relative;
+    top: 3px;
+    padding-right: 2px;
+  }
+  .main .pdInfo .infoDetails .price em {
+    position: relative;
+    top: 5px;
+  }
+  .main .pdInfo .infoDetails .price.colorb {
+    color: #181818;
+  }
+  .main .pdInfo .infoDetails .internalPurchase-box .internalPurchasePrice {
+    position: relative;
+    display: inline-block;
+    padding-right: 49px;
+    font-size: 20px;
+    color: #de0021;
+  }
+  .main .pdInfo .infoDetails .internalPurchase-box .internalPurchasePrice i {
+    font-size: 12px;
+    padding-right: 2px;
+  }
+  .main .pdInfo .infoDetails .internalPurchase-box .internalPurchasePrice::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 0px;
+    display: block;
+    width: 40px;
+    height: 15px;
+    border: 0;
+    vertical-align: baseline;
+    background: url(http://design.ehaoyao.com/new_site/static/images/icon_internalpurchase.png) no-repeat center / 40px;
+  }
+  .main .pdInfo .infoDetails .internalPurchase-box .toInternalPurchase {
+    display: inline-block;
+    margin-left: 35px;
+    color: #006eb6;
+    text-decoration: underline;
+  }
+  .main .pdInfo .infoDetails .porelative {
+    position: relative;
+  }
+  .main .pdInfo .infoDetails .xiposab {
+    width: 100%;
+  }
+  .main .pdInfo .infoDetails .internalPurchaseTip {
+    margin-bottom: 8px;
+    color: #4e4e4e;
+    font-size: 12px;
+  }
+  .main .pdInfo .infoDetails .internalPurchaseTip span {
+    color: #ff344d;
+  }
+  .main .pdInfo .infoDetails .detailsBox {
+    min-height: 50px;
+    background: url(http://design.ehaoyao.com/new_site/static/images/coupon.png) no-repeat center top;
+    line-height: 36px;
+    padding: 5px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+  }
+  .main .pdInfo .infoDetails .detailsBox .number {
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+  }
+  .main .pdInfo .infoDetails .detailsBox .coupon {
+    display: block;
+    width: 230px;
+    height: 30px;
+    float: left;
+    overflow: hidden;
+  }
+  .main .pdInfo .infoDetails .detailsBox .coupon b {
+    width: 60px;
+    height: 18px;
+    line-height: 18px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 13px;
+    background-position: -180px 0;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .main .pdInfo .infoDetails .detailsBox .activity {
+    margin-top: -5px;
+    margin-bottom: 5px;
+  }
+  .main .pdInfo .infoDetails .detailsBox .activity i {
+    display: block;
+    float: left;
+    padding: 0 6px;
+    height: 19px;
+    line-height: 19px;
+    text-align: center;
+    color: #ff334c;
+    border: 1px solid #ff334c;
+    border-radius: 10px;
+    margin-right: 15px;
+    background-color: #fff;
+  }
+  .main .pdInfo .infoDetails .detailsBox .activity .actop {
+    margin-top: 9px;
+    color: #663200;
+    max-height: 68px;
+    width: 448px;
+  }
+  .main .pdInfo .infoDetails .detailsBox .activity .actop a {
+    color: #663200;
+    cursor: default;
+  }
+  .main .pdInfo .infoDetails .detailsBox .activity .selcx {
+    display: none;
+    position: absolute;
+    right: 22px;
+    bottom: 0;
+    background: url(http://design.ehaoyao.com/new_site/static/images/seldown.png) no-repeat right center;
+    padding-right: 20px;
+    color: #663200;
+    cursor: pointer;
+  }
+  .main .pdInfo .infoDetails .detailsBox .activity .selcx.saledown {
+    background: url(http://design.ehaoyao.com/new_site/static/images/selup.png) no-repeat right center;
+  }
+  .main .pdInfo .infoDetails .detailsBox .activity p {
+    height: 21px;
+    line-height: 21px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .main .pdInfo .infoDetails .detailsBox .activity p a {
+    position: relative;
+  }
+  .main .pdInfo .infoDetails .detailsBox .activity p span {
+    color: #4e4e4e;
+    position: absolute;
+    right: -50px;
+  }
+  .main .pdInfo .infoDetails .detailsBox .activity .shp {
+    height: 25px;
+    margin-left: 15px;
+  }
+  .main .pdInfo .infoDetails .detailsBox .activity .shp img {
+    width: 25px;
+    height: 25px;
+    margin-right: 3px;
+  }
+  .main .pdInfo .infoDetails .address {
+    margin-top: 8px;
+    margin-bottom: 15px;
+    z-index: 1;
+  }
+  .main .pdInfo .infoDetails .address .fw {
+    padding: 0 21px 0 0;
+    height: 26px;
+    line-height: 26px;
+  }
+  .main .pdInfo .infoDetails .address .sel_address {
+    position: relative;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 20px;
+    height: 24px;
+    line-height: 24px;
+    cursor: pointer;
+    z-index: 0;
+    font-size: 12px;
+    font-family: "microsoft yahei";
+    border: 1px solid #b7b7b7;
+    background-color: #fff;
+    background-image: url(http://design.ehaoyao.com/new_site/static/images/addressicon.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+  .main .pdInfo .infoDetails .address .sel_address .address_title {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 26px;
+  }
+  .main .pdInfo .infoDetails .address .sel_address.hover {
+    border-bottom: none;
+    background-image: none;
+  }
+  .main .pdInfo .infoDetails .address .ribox {
+    box-sizing: border-box;
+  }
+  .main .pdInfo .infoDetails .address .mode span {
+    cursor: pointer;
+    padding: 0 8px;
+    height: 24px;
+    display: block;
+    border: 1px solid #b8b7bd;
+    text-align: center;
+    line-height: 24px;
+    margin-left: 6px;
+    float: left;
+  }
+  .main .pdInfo .infoDetails .address .mode span.active {
+    height: 22px;
+    line-height: 22px;
+    border: 2px solid #ff334c;
+  }
+  .main .pdInfo .infoDetails .address .songd {
+    color: #9d9d9d;
+    line-height: 26px;
+    padding-left: 10px;
+  }
+  .main .pdInfo .infoDetails .address .listBox {
+    font-size: 14px;
+  }
+  .main .pdInfo .infoDetails .address .listBox .list {
+    cursor: pointer;
+    border: 1px solid #e4e5e6;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+    padding: 0 8px;
+    margin-right: 10px;
+    position: relative;
+    color: #181818;
+    top: 1px;
+  }
+  .main .pdInfo .infoDetails .address .listBox .list.active {
+    border-bottom: 1px solid #fff;
+    border-top: 2px solid #ff344d;
+    color: #ff344d;
+  }
+  .main .pdInfo .infoDetails .address .address {
+    border: 1px solid #e4e5e6;
+    padding: 10px 8px;
+    color: #181818;
+    line-height: 30px;
+    font-weight: 700;
+    min-height: 62px;
+  }
+  .main .pdInfo .infoDetails .address .address span {
+    color: #3e3e3e;
+    padding-right: 25px;
+    font-weight: normal;
+  }
+  .main .pdInfo .infoDetails .address .address-tips {
+    float: left;
+    height: 25px;
+    margin-left: 5px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #9d9d9d;
+  }
+  .main .pdInfo .infoDetails .address .address-tips > a {
+    padding: 0 4px;
+    color: #9d9d9d;
+    text-decoration: underline;
+    cursor: default;
+  }
+  .main .pdInfo .infoDetails .drugshop {
+    position: absolute;
+    top: 180px;
+    width: 100%;
+  }
+  .main .pdInfo .infoDetails .tiptop {
+    line-height: 40px;
+    border: 1px dotted #dfdfdf;
+    border-width: 1px 0;
+    padding-left: 10px;
+    margin-bottom: 15px;
+  }
+  .main .pdInfo .infoDetails .tiptop .sctip {
+    padding: 0 20px 0 0;
+  }
+  .main .pdInfo .infoDetails .tiptop .sctip em {
+    padding-right: 25px;
+  }
+  .main .pdInfo .infoDetails .tiptop .tipcontent,
+  .main .pdInfo .infoDetails .tiptop .speccontent {
+    width: 320px;
+  }
+  .main .pdInfo .infoDetails .tiptop .tipcontent a,
+  .main .pdInfo .infoDetails .tiptop .speccontent a {
+    cursor: pointer;
+    height: 38px;
+    display: block;
+  }
+  .main .pdInfo .infoDetails .tiptop .tipcontent p,
+  .main .pdInfo .infoDetails .tiptop .speccontent p {
+    cursor: pointer;
+    margin-bottom: 8px;
+    max-width: 100%;
+  }
+  .main .pdInfo .infoDetails .tiptop .tipcontent p.disabled span,
+  .main .pdInfo .infoDetails .tiptop .speccontent p.disabled span {
+    height: 30px;
+    line-height: 30px;
+    border: 0;
+    color: #cecece;
+    background-color: #f2f2f2;
+  }
+  .main .pdInfo .infoDetails .tiptop .tipcontent span,
+  .main .pdInfo .infoDetails .tiptop .speccontent span {
+    position: relative;
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    max-width: 100%;
+    border: 1px solid #b8b7bd;
+    padding: 0 8px 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+  .main .pdInfo .infoDetails .tiptop .tipcontent span.active,
+  .main .pdInfo .infoDetails .tiptop .speccontent span.active {
+    border: 2px solid #ff0036;
+    line-height: 26px;
+    padding: 0 11px 0 5px;
+  }
+  .main .pdInfo .infoDetails .tiptop .tipcontent span.active:after,
+  .main .pdInfo .infoDetails .tiptop .speccontent span.active:after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    background: url(http://design.ehaoyao.com/new_site/static/images/tcicon.png) no-repeat;
+    background-position: right bottom;
+  }
+  .main .pdInfo .infoDetails .tiptop .tipcontent span img,
+  .main .pdInfo .infoDetails .tiptop .speccontent span img {
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-right: 2px;
+  }
+  .main .pdInfo .infoDetails .tiptop .speccontent {
+    max-height: 180px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .main .pdInfo .infoDetails .tiptop .speccontent p {
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .main .pdInfo .infoDetails .tiptop .speccontent p.disabled span {
+    height: 30px;
+    line-height: 30px;
+    border: 0;
+    color: #cecece;
+    background-color: #f2f2f2;
+  }
+  .main .pdInfo .infoDetails .selectNumber {
+    height: 34px;
+    line-height: 34px;
+    border: none;
+  }
+  .main .pdInfo .infoDetails .selectNumber input {
+    width: 34px;
+    height: 26px;
+    border: 1px solid #a7a6ac;
+    text-indent: 4px;
+    padding: 4px;
+  }
+  .main .pdInfo .infoDetails .selectNumber .raicon {
+    width: 16px;
+    height: 14px;
+    display: block;
+    border: 1px solid #a7a6ac;
+    margin-left: 50px;
+    cursor: pointer;
+  }
+  .main .pdInfo .infoDetails .selectNumber .raicon.disabled {
+    opacity: .5;
+  }
+  .main .pdInfo .infoDetails .selectNumber .reduce {
+    background-position: -31px 0;
+  }
+  .main .pdInfo .infoDetails .selectNumber .add {
+    background-position: -15px 0;
+    margin-top: 4px;
+  }
+  .main .pdInfo .infoDetails .selectNumber span {
+    padding-left: 13px;
+  }
+  .main .pdInfo .infoDetails .selectNumber span.xgsum {
+    color: #0370cb;
+  }
+  .main .pdInfo .infoDetails .selectNumber span.pro-restriction {
+    color: #ff334c;
+    display: none;
+    padding-left: 0;
+  }
+  .main .pdInfo .infoDetails .hysPromise {
+    line-height: 40px;
+    border-top: 1px dashed #dfdfdf;
+  }
+  .main .pdInfo .infoDetails .hysPromise .title {
+    margin-right: 10px;
+  }
+  .main .pdInfo .infoDetails .hysPromise .content {
+    display: inline-block;
+    padding-left: 18px;
+    width: 65px;
+    background: url(http://design.ehaoyao.com/new_site/static/images/icon_details_promiseTips.png) no-repeat left center;
+  }
+  .main .pdInfo .infoDetails .detailsBtn {
+    margin: 15px 0 25px 70px;
+  }
+  .main .pdInfo .infoDetails .detailsBtn a {
+    width: 132px;
+    height: 34px;
+    display: inline-block;
+    text-align: center;
+    line-height: 34px;
+    border: 1px solid #ff344d;
+    background-color: #ffedee;
+    font-size: 16px;
+    color: #ff344d;
+    vertical-align: middle;
+    margin-right: 10px;
+    position: relative;
+  }
+  .main .pdInfo .infoDetails .detailsBtn a:hover {
+    background-color: #ffe1e3;
+  }
+  .main .pdInfo .infoDetails .detailsBtn a.shopCart {
+    color: #fff;
+    background: #ff344d url(http://design.ehaoyao.com/new_site/static/images/cart.png) no-repeat;
+    background-position: 10px center;
+    text-indent: 20px;
+  }
+  .main .pdInfo .infoDetails .detailsBtn a.shopCart.disabled {
+    background-color: #bebebe;
+    background-position: 10px center;
+    border-color: #bebebe;
+  }
+  .main .pdInfo .infoDetails .detailsBtn a.shopCart:hover {
+    background-color: #ff0927;
+  }
+  .main .pdInfo .infoDetails .detailsBtn a.shopCart.disabled:hover {
+    background-color: #bebebe;
+  }
+  .main .pdInfo .infoDetails .detailsBtn a.gobuy:hover {
+    background-color: #ffe1e3;
+  }
+  .main .pdInfo .infoDetails .detailsBtn a.gobuy.disabled {
+    border: 1px solid #c5c5c5;
+    background-color: #f1f1f1;
+    color: #b1b1b1;
+  }
+  .main .pdInfo .infoDetails .detailsBtn a.gobuy.disabled:hover {
+    background-color: #f1f1f1;
+  }
+  .main .pdInfo .infoDetails .detailsBtn a.addConsultation {
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #ff344d;
+    background: #ff344d;
+    text-align: center;
+  }
+  .main .pdInfo .infoDetails .detailsBtn a.addConsultation:hover {
+    background-color: #ff0927;
+  }
+  .main .pdInfo .infoDetails .detailsBtn a.addDemand {
+    color: #fff;
+    background-color: #ff344d;
+  }
+  .main .pdInfo .infoDetails .detailsBtn a.addDemand.disabled {
+    border-color: #bebebe;
+    background-color: #bebebe;
+  }
+  .main .pdInfo .infoDetails .prescribed-tip {
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #181818;
+  }
+  .main .pdInfo .infoDetails .prescribed-tip .label {
+    display: inline-block;
+    width: 69px;
+    padding-left: 24px;
+    box-sizing: border-box;
+    background: url(http://design.ehaoyao.com/new_site/static/images/icon_tip.png) no-repeat left center / 13px;
+  }
+  .main .pdInfo .infoDetails .prescribed-tip .tel-tip {
+    padding-left: 69px;
+  }
+  .main .pdInfo .infoDetails .prescribed-tip .red {
+    color: #ff344d;
+  }
+  .zoomPad {
+    cursor: move;
+    float: left;
+    height: 400px;
+    position: relative;
+    width: 400px;
+    z-index: 99;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+  }
+  .zoomPad img {
+    width: 398px;
+    height: 398px;
+  }
+  .zoomPreload {
+    -moz-opacity: .8;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    color: #333;
+    font-size: 12px;
+    font-family: Tahoma;
+    text-decoration: none;
+    border: 1px solid #CCC;
+    background-color: #fff;
+    padding: 8px;
+    text-align: center;
+    background-image: url(http://design.ehaoyao.com/new_mall/resources/images/zoomloader.gif);
+    background-repeat: no-repeat;
+    background-position: 43px 30px;
+    z-index: 110;
+    width: 90px;
+    height: 43px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    *width: 100px;
+    *height: 49px;
+  }
+  .zoomPup {
+    width: 262px;
+    height: 216px;
+    overflow: hidden;
+    background: url(http://design.ehaoyao.com/new_site/static/images/mask.png) 0 0 repeat scroll;
+    -moz-opacity: .6;
+    opacity: .6;
+    filter: alpha(opacity=60);
+    z-index: 120;
+    position: absolute;
+    border: 0;
+    z-index: 101;
+    cursor: move;
+  }
+  .zoomOverlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #FFF;
+    z-index: 5000;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 101;
+  }
+  .zoomWindow {
+    position: absolute;
+    left: 110%;
+    top: 40px;
+    background: #FFF;
+    z-index: 6000;
+    height: auto;
+    z-index: 110;
+  }
+  .zoomWrapper {
+    position: relative;
+    border: 1px solid #E2E2E2;
+    z-index: 110;
+  }
+  .zoomWrapperTitle {
+    display: block;
+    background: #999;
+    color: #FFF;
+    height: 18px;
+    line-height: 18px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 120;
+    -moz-opacity: .6;
+    opacity: .6;
+    filter: alpha(opacity=60);
+  }
+  .zoomWrapperImage {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    z-index: 110;
+  }
+  .main .pdInfo .pdInfoSlide .pdtImg .zoomWrapperImage img {
+    border: 0;
+    display: block;
+    position: absolute;
+    z-index: 101;
+    width: auto;
+    height: auto;
+  }
+  .zoomIframe {
+    z-index: -1;
+    filter: alpha(opacity=0);
+    -moz-opacity: .8;
+    opacity: .8;
+    position: absolute;
+    display: block;
+  }
