@@ -4,11 +4,17 @@ $(() => {
         $(this).parents(".login-tab").siblings().toggle()
 
     });
+    $(".login-switch").click(function(){ 
+        // $(this).addClass("on").siblings().removeClass("on");
+        $(this).parents(".username-login").toggle().siblings().toggle()
+
+    });
     $(".input-box").children("label").click(function(){
       
         $(this).toggle().parents(".input-box").addClass("input-focus");
         
     })
+
 
     $("#submit").click(function() {
         let username = $.trim($("#userName").val());
@@ -27,13 +33,13 @@ $(() => {
 
         if (username==undefined) {
 
-          $(this).parents(".username-box").siblings().children(".login-error").toggle().addClass("login-error").children("span").text("该用户名不存在！");
+          $(".username-box").siblings().children(".login-error").toggle().addClass("login-error").children("span").text("该用户名不存在！");
         }
         if(password.length<6){
-            $(this).parents(".username-box").siblings().children(".login-error").toggle().addClass("login-error").children("span").text("请输入6-20位密码！");
+            $(".username-box").siblings().children(".login-error").toggle().addClass("login-error").children("span").text("请输入6-20位密码！");
         }
         $(".login-switch").click(function(){
-            $(this).parents(".username-login").toggle().siblings(".phone-login").toggle();
+            $(".username-login").toggle().siblings(".phone-login").toggle();
         })
         
       
@@ -41,6 +47,7 @@ $(() => {
             /* 给登录按钮添加点击事件 */
             $("#submit").click(function() {
                 let username = $.trim($("#userName").val());
+                // let username = $.trim($("#phoneNumber").val());
                 let password = $.trim($("#password").val());
         
                 $.ajax({
@@ -57,7 +64,7 @@ $(() => {
                         localStorage.setItem("user_name", data.data.username);
         
                         /* (2) 跳转回列表页 */
-                        location.href = "./list.html";
+                        location.href = "./index.html";
                     } else {
                         alert(data.data.msg);
                     }

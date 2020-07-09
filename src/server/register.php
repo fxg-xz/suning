@@ -22,7 +22,7 @@ if($row!=null){
     echo "error";
 
 }else{
-    $sql_insert = "insert into user(username,password) values('$username','$password')";
+    $sql_insert = "insert into user(username,password,phone) values('$username','$password','$username')";
     //插入数据
     $ret2 = mysqli_query($db,$sql_insert);
     if($ret2==true){

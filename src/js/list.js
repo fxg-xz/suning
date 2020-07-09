@@ -1,7 +1,7 @@
 $(() => {
     $.ajax({
         type: "get",
-        url: "http://127.0.0.1/fxg/suning/src/server/nav.json",
+        url: "../server/nav.json",
         dataType: "json",
         success: function (data) {
          render(data);
@@ -29,18 +29,19 @@ $(() => {
     };
 
 
+
     new Promise(function(resolve, reject) {
         $.ajax({
             type: "get",
-            url: "http://127.0.0.1/fxg/suning/src/server/getPageCount.php",
+            url: "../server/getPageCount.php",
             dataType: "json",
             success: (data) => {
                 let res = "";
                 for (let i = 0; i < data.count; i++) {
                     res += `<a href="javascript:;">${i + 1}</a>`
                 }
-                $("#page").html(res);
-                $("#page").children().eq(0).addClass("active");
+                $(".search-page").html(res);
+                $(".search-page").children().eq(0).addClass("active");
 
                 resolve();
             }
@@ -56,7 +57,7 @@ $(() => {
     function getDataWithPage(page, type) {
         $.ajax({
             type: "get",
-            url: "http://127.0.0.1/fxg/suning/src/server/getGoodsData.php",
+            url: "../server/getGoodsData.php",
             data: `page=${page}&sortType=${type}`,
             dataType: "json",
             success: (data) => renderUI(data)
@@ -88,7 +89,7 @@ $(() => {
                     </div>
                     <div class="store-stock">${ele.shopName}</div>
                 </div>
-                <div class="res-opt one-third">
+                <div class="res-opt one-third" data-id=${ele.good_id}>
                     <a rel="nofollow"  class="btn-db"><i></i><em>取消</em>对比</a>
                     <a rel="nofollow"  class="btn-sc"><i></i><em>已</em>关注</a>
                     <a rel="nofollow"  class="btn-gwc"><i></i>加入购物车</a>
@@ -103,14 +104,14 @@ $(() => {
     };
 
     /* 2、加入购物车的点击事件 */
-    $(".general").on("click", ".btn-gwc", function() {
+    $(document).on("click",".btn-gwc", function() {
         console.log("++")
             /* user_id user_name */
         let user_id = localStorage.getItem("user_id") || "";
         let user_name = localStorage.getItem("user_name") || "";
         let good_id = $(this).parent().attr("data-id");
 
-        console.log(user_id, user_name);
+        console.log( $(this).parent().attr("data-id"));
         if (user_id && user_name) {
             /* 发请求，执行添加到购物车 */
             $.ajax({
@@ -124,16 +125,16 @@ $(() => {
             /* 跳转去登录 */
             location.href = "./login.html"
         }
-    })
+    });
 
     /* 3、点击按钮的时候加入购物车 */
     $(".btn-gwc").click(function() {
         location.href = "./cart.html"
-    })
+    });
 
 
     /* 4、排序功能 */
-    $(".sort >li").click(function() {
+    $(".sort >span").click(function() {
 
         /* 设置选中状态 */
         $(this).addClass("cur").siblings().removeClass("cur");
@@ -141,13 +142,13 @@ $(() => {
         let sortType = $(this).data().sort;
         // console.log("sortType", sortType);
 
-        getDataAndRenderUI(sortType);
+        renderUI(sortType);
 
         
     })
 
     /* 5、分页功能 */
-    $(".pagination").on("click", ".p-class", function(e) {
+    $(".search-page").on("click", "a", function(e) {
 
         /* 排除上一页和下一页的页面点击事件 */
         // if ($(this).parent()[0].id == "prevPage" || $(this).parent()[0].id == "nextPage") return;
@@ -156,24 +157,29 @@ $(() => {
         $(this).addClass("active").siblings().removeClass("active");
         let page = $(this).text() * 1 - 1;
         // console.log(page);
-        getDataAndRenderUI($(".cur").data().sort, page)
+        renderUI($(".cur").data().sort, page)
     });
 
 
     /* 上一页和下一页的功能 */
-    $("#prevPage,#nextPage").click(function() {
+    $("#prePage,#nextPage").click(function() {
 
         /* 设置选中状态 */
-        let page = $(".active").text() * 1 - 1;
-        if (this.id == "prevPage") {
+        let page = $(".search-page").children("a").text() * 1 - 1;
+        if (this.id == "prePage") {
             page--;
         } else if (this.id == "nextPage") {
             page++;
         }
 
-        $(".p-class").eq(page).addClass("active").siblings().removeClass("active")
-        getDataAndRenderUI($(".cur").data().sort, page)
+        $(".search-page ").eq(page).addClass("cur").siblings().removeClass("cur")
+        renderUI($(".cur").data().sort, page)
     });
+    $(".tab-cart-tip-warp").click(()=>{
+        console.log("0000");
+        
+        location.href ="./cart.html"
+    })
 });
 
  

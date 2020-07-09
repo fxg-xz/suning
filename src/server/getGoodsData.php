@@ -3,17 +3,17 @@
 $db = mysqli_connect("127.0.0.1","snsx","123456","suningshengxian");
 
 # 获取参数
-$page = ($_REQUEST["page"] -1 ) * 20;
+$page = ($_REQUEST["page"] -1 ) * 40;
 $type = $_REQUEST["sortType"];
 
 # 02-查询获取数据库所有的数据
 if($type == 0)
 {
-  $sql = "SELECT * FROM goods LIMIT $page, 20";
+  $sql = "SELECT * FROM goods LIMIT $page, 40";
 }elseif($type == 1){
-  $sql = "SELECT * FROM goods ORDER BY price DESC LIMIT $page, 20";
+  $sql = "SELECT * FROM goods ORDER BY price DESC LIMIT $page, 40";
 }else{
-  $sql = "SELECT * FROM goods ORDER BY price ASC LIMIT $page, 20";
+  $sql = "SELECT * FROM goods ORDER BY price ASC LIMIT $page, 40";
 }
 
 $result = mysqli_query($db,$sql);

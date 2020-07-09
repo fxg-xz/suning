@@ -356,7 +356,7 @@ label {
 }
 
 label.mark {
-    background: url("../img/mark1.png") no-repeat -1px -1px;
+    background: url("../image/mark1.png") no-repeat -1px -1px;
 }
 
 a:hover {

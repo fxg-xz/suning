@@ -24,7 +24,7 @@ $(()=>{
         }
    } 
    //退出登录
-   $(".ng-username-slide").eq(1).on("click",function(){
+   $(".ng-username-slide").on("click","a",function(){
        exitu();
    })
     function exitu(){
@@ -34,38 +34,68 @@ $(()=>{
     }
 //     header
     //登录、注册
-    $(".reg-bar-node").eq(0).on("click",function(){
+    // $(".reg-bar-node").on("click", ".login",function(){
+    //     console.log("666");
         
-        window.location.href="./login.html"
-    });
-    $(".reg-bar-node").eq(1).on("click",function(){
+    //     window.location.href="./login.html"
+    // });
+    $(".reg-bar-node").on("click",".reg-bbb",function(){
 
         window.location.href="./register.html"
     });
     // 二级菜单栏
-    class NavSecond{
-        constructor(data){
-            this.data=data;
+    $.ajax({
+        type: "get",
+        url: "../server/nav1.json",
+        dataType: "json",
+        success: function (data) { 
+          nav(data);
+
+              
         }
-        init(){
-            let menu=this.render();
-            $(".site-nav-child").html($(menu));
-        }
-        render(){
-            let nav1=this.data.map((ele)=>{
-                    return `<dl class="sn-site-list">
-                    <dt>${ele.title}</dt>
-                    <dd>
-                    <p><a>${ele.tab_title}</a></p>
-                    </dd>
-                    </dl>`
-                }).join("");
-                return nav1;
-        }
+    });
+      function  nav(data){ 
+           var html='';
+            for(var i=0;i<5;i++){
+                var nav2 = '';   
+                var len=data[i].tab_title.length;  
+
+               for(var j=0;j<len;j++){
+                    nav2 +=`
+                    <p><a>${data[i].tab_title[j]}</a></p>
+                    `
+                };  
+                 html+=`
+                <dl class="sn-site-list">
+                    <dt>${data[i].title}</dt>
+                    <dd>${nav2}</dd>
+                    </dl>
+                        `        
+        };
+        $(".site-nav-child").html(html);
+        var shop='';
+        var service='';
+        var len2=data[5].tab_title.length;
+        var len3=data[6].tab_title.length;
+        for(var m=0;m<len2;m++){
+            shop+=`<a href="###"  rel="nofollow" target="_blank">${data[5].tab_title[m]}</a>`;    
+        };
+        for(var n=0;n<len3;n++){
+            service+=`<a href="###"  rel="nofollow" target="_blank">${data[6].tab_title[n]}</a>`;    
+        };
+        $(".shop-center-child").html(shop);
+        $(".service-center-child ").html(service);
     };
-    let menu=new NavSecond(data1);
-    
-    menu.init();
+
+   $(".site-nav-child").mouseenter(()=>{
+       $(".site-nav-child").css("display","block");
+       $(".ng-bar-node-site").addClass("ng-bar-node-hover")
+   })
+   $(".site-nav-child").mouseleave(()=>{
+       $(".site-nav-child").css("display","none");
+       $(".ng-bar-node-site").removeClass("ng-bar-node-hover");
+     
+   });
     $(".ng-bar-node-site").mouseenter(()=>{
         $(".ng-sn-site-nav").css("display","block");
         $(".ng-bar-node-site").addClass("ng-bar-node-hover")
@@ -115,6 +145,39 @@ $(()=>{
        $(".mb-down-child").css("display","none");
     });
 
+
+    // 
+    $.ajax({
+        type: "get",
+        url: "../server/nav3.json",
+        dataType: "json",
+        success: function (data) { 
+          nav3(data);
+     console.log(data);
+     
+        }
+    });
+      function  nav3(data){ 
+           var html='';
+            for(var i=0;i<5;i++){
+                var navThree = '';   
+                var len=data[i].tab_title.length;  
+               for(var j=0;j<len;j++){
+                    navThree +=`
+                    <a href="###"_blank"  data-hot="" data-color="">${data[i].tab_title[j]}</a>
+                    `
+                };  
+                 html+=`
+                 <li class="sort-item">
+                 <em class="iconfont tubiao cate${i+1}"></em>
+                 <span class="sort-item-title">${data[i].title}</span><i class="iconfont arrow"></i>
+                 <span class="sort-item-list">${navThree}</span>
+                 </li>
+                        `           
+        };
+        $(".sort-list").html(html);
+        
+    };
     // 轮播图
    
 
@@ -201,8 +264,8 @@ $(()=>{
         dataType: "json",
         success: function (data) { 
           render(data);  
-          renderR(data);       
-          
+          renderR(data);                
+        //   console.log(data);
         }
     });
   function render(data){
@@ -254,7 +317,7 @@ $(()=>{
                  </ul>
                 </div>
                 ` 
-            $(".good-floor").eq(i).html(html);
+            $(".good-floor").eq(i-1).html(html);
             
     }
     };

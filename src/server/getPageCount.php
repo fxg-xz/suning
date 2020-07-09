@@ -6,6 +6,6 @@ $db = mysqli_connect("127.0.0.1", "snsx", "123456", "suningshengxian");
 $sql = "SELECT * FROM goods";
 
 $result = mysqli_query($db, $sql);
-$count = ceil(mysqli_num_rows($result) / 20);
+$count = ceil(mysqli_num_rows($result) / 40);
 echo '{"count":'.$count."}";
 ?>

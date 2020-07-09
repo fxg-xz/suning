@@ -11,6 +11,7 @@ $sql = "SELECT * FROM cart WHERE good_id = $good_id AND user_id = $user_id";
 $result = mysqli_query($db,$sql);
 $num = mysqli_num_rows($result);
 
+
 if($num == 0){
   $sql = "INSERT INTO cart " .
     "(cart_id,good_id,user_id,num)" .
