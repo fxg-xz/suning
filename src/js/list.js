@@ -69,9 +69,9 @@ $(() => {
 
         let html = data.map((ele) => {
             return `
-    <li  class="item-wrap >
+    <li  class="item-wrap" >
         <div class="item-bg">
-            <div class="product-box ">
+            <div class="product-box">
                 <div class="res-img">
                     <div class="img-block" tempindex="01">
                         <a target="_blank" title=""  class="sellPoint">
@@ -88,6 +88,9 @@ $(() => {
                         <div class="info-evaluate">${ele.disCount}</div>
                     </div>
                     <div class="store-stock">${ele.shopName}</div>
+                    <div class="sales-label" ishotbrief="false">
+                    <span class="lq"><i>领券196-118</i><em>满196用118</em></span>
+                    </div>
                 </div>
                 <div class="res-opt one-third" data-id=${ele.good_id}>
                     <a rel="nofollow"  class="btn-db"><i></i><em>取消</em>对比</a>
@@ -95,7 +98,7 @@ $(() => {
                     <a rel="nofollow"  class="btn-gwc"><i></i>加入购物车</a>
                 </div>
             </div>
-        </div>
+        </div> 
     </li>
                
             `
@@ -103,10 +106,19 @@ $(() => {
         $(".general").html(html);
     };
 
+    // $(".item-wrap").mouseenter(function(){
+    //     console.log("000");
+        
+    //     $(".item-wrap").addClass("on").siblings().removeClass("on");
+    // })
+    // $(".item-wrap").mouseleave(function(){
+    //     $(".item-wrap").removeClass("on");
+    // })
     /* 2、加入购物车的点击事件 */
     $(document).on("click",".btn-gwc", function() {
-        console.log("++")
+        // console.log("++")
             /* user_id user_name */
+        
         let user_id = localStorage.getItem("user_id") || "";
         let user_name = localStorage.getItem("user_name") || "";
         let good_id = $(this).parent().attr("data-id");
@@ -128,11 +140,18 @@ $(() => {
     });
 
     /* 3、点击按钮的时候加入购物车 */
-    $(".btn-gwc").click(function() {
-        location.href = "./cart.html"
-    });
-
-
+    // $(".btn-gwc").click(function() {
+    //     location.href = "./cart.html"
+    // });
+    $(document).on("click",".sellPoint",function(){
+        //  console.log("0000");
+        location.href = "./product-detail.html"
+    })
+    
+       
+        
+        
+    
     /* 4、排序功能 */
     $(".sort >span").click(function() {
 
@@ -176,9 +195,13 @@ $(() => {
         renderUI($(".cur").data().sort, page)
     });
     $(".tab-cart-tip-warp").click(()=>{
-        console.log("0000");
+        // console.log("0000");
         
         location.href ="./cart.html"
+    });
+    $(".more-btn ").click(()=>{
+        $(".height-adaption").addClass("height-adaption");
+        $(".more-btn ").text("收起");
     })
 });
 

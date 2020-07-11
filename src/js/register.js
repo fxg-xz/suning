@@ -51,12 +51,11 @@ let id;
         /*密码长度6-20字符（大小写字母和数字）  */
        
         $("#setPsw_rank").removeClass("hide")
-        if(/([0-9]|[a-zA-Z]|\S){6,}/.test(val)){
+        if(/^(?:\d+|[a-zA-Z]+|[!@#$%^&*]+)$/.test(val)){
             $(".level1").css("background","#fa0")
-        }else if(/^(?![0-9]+$)(?![a-z]+$)(?![A-Z]+$)(?!([^(0-9a-zA-Z)]|[\(\)])+$)([^(0-9a-zA-Z)]|[\(\)]|[a-z]|[A-Z]|[0-9]){6,}$/
-        .test(val)){
+        }else if(/^(?![a-zA-z]+$)(?!\d+$)(?![!@#$%^&*]+$)[a-zA-Z\d!@#$%^&*]+$/.test(val)){
             $(".level2").css("background","#fa0")
-        }else if(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{6,}$/.test(val)){
+        }else if(/^(?![a-zA-z]+$)(?!\d+$)(?![!@#$%^&*]+$)(?![a-zA-z\d]+$)(?![a-zA-z!@#$%^&*]+$)(?![\d!@#$%^&*]+$)[a-zA-Z\d!@#$%^&*]+$ /.test(val)){
             $(".level3").css("background","#fa0")
         }
     })

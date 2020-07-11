@@ -4,16 +4,26 @@ $(()=>{
     //用户登录状态
     load_data();
     function load_data(){
-        var theme=localStorage.getItem("user");
+        var theme=localStorage.getItem("user_name");
         if(theme==null||theme==""){
-           $(".username-handle").hide();
+        //    $(".username-bar-node-noside").hide();
            $("#reg-bar-node").show();
             $("#usernameHtml02").html('');
         }else{
-            $(".username-handle").show(); 
+            $("#username-node-slide").show(); 
+            $(".username-bar-node-noside").show();
             $("#reg-bar-node").hide(); 
             $("#usernameHtml02").html(theme);
-           $(".ng-username-slide").mouseenter(()=>{
+
+            $(".username-bar-node-noside").mouseenter(()=>{
+                $(".ng-username-slide").css("display","block");
+                $(".username-bar-node").addClass("ng-bar-node-hover")
+            });
+            $(".username-bar-node-noside").mouseleave(()=>{
+                 $(".ng-username-slide").css("display","none");
+                 $(".username-bar-node").removeClass("ng-bar-node-hover");
+             });
+             $(".ng-username-slide").mouseenter(()=>{
                 $(".ng-username-slide").css("display","block");
                 $(".username-bar-node").addClass("ng-bar-node-hover")
             });
@@ -21,14 +31,17 @@ $(()=>{
                  $(".ng-username-slide").css("display","none");
                  $(".username-bar-node").removeClass("ng-bar-node-hover");
              });
+
+           
         }
    } 
    //退出登录
    $(".ng-username-slide").on("click","a",function(){
+       $("#username-node-slide").remove();
        exitu();
    })
     function exitu(){
-        localStorage.removeItem("user"); 
+        localStorage.removeItem("user_name"); 
         //刷新部分
         load_data();
     }
@@ -164,7 +177,7 @@ $(()=>{
                 var len=data[i].tab_title.length;  
                for(var j=0;j<len;j++){
                     navThree +=`
-                    <a href="###"_blank"  data-hot="" data-color="">${data[i].tab_title[j]}</a>
+                    <a href="./list.html"_blank"  data-hot="" data-color="">${data[i].tab_title[j]}</a>
                     `
                 };  
                  html+=`

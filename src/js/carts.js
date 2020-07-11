@@ -119,8 +119,11 @@ $(() => {
         $(this).next().toggleClass("mark");
         $(".cartBox").find("input[type=checkbox]").next().toggleClass("mark");
         computedTotal();
-    })
+    });
 
+    $(".list_delall").click(function(){
+        $(".cartBox").remove();
+    });
 
     /* 封装方法计算商品的总数和总价 */
     function computedTotal() {

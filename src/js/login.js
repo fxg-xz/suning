@@ -1,7 +1,8 @@
 $(() => {
   $(".tab-item").click(function(){ 
         $(this).addClass("on").siblings().removeClass("on");
-        $(this).parents(".login-tab").siblings().toggle()
+        $(this).parents(".login-tab").siblings(".pc-login" ).toggle()
+        $(this).parents(".login-tab").siblings(".scan-login" ).toggle()
 
     });
     $(".login-switch").click(function(){ 
